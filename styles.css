@@ -1,0 +1,13 @@
+/* CSS class that blurs the thumbnail */
+ytd-thumbnail img {
+    filter: blur(20px);
+}
+
+
+/* Omits the Youtube thumbnail titles */
+#video-title,
+#video-title-link,
+.yt-simple-endpoint.style-scope.ytd-video.renderer {
+    color: transparent;
+    text-shadow: none;
+}
