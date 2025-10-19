@@ -10,7 +10,6 @@
       "css": ["styles.css"]
     }
   ],
-  "permissions": ["activeTab"],
 
   "action" : {
     "default_popup": "popup.html"
@@ -20,5 +19,7 @@
     "16": "/logo/16logo.png",
     "48": "/logo/48logo.png",
     "128": "/logo/128logo.png"
-  }
+  },
+
+  "permissions" : ["activeTab", "storage"]
 }

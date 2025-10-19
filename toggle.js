@@ -1,13 +1,18 @@
-// const btn = document.getElementById('toggle-btn');
+const toggleBtn = document.getElementById("toggleBtn");
 
-// chrome.storage.local.get('enabled', ({ enabled }) => {
-//     btn.innerText = enabled ? 'Turn Off' : 'Turn On';
-// });
+// Update button text based on current state when popup opens
+chrome.storage.sync.get({ enabled: true }, ({ enabled }) => {
+    toggleBtn.textContent = enabled ? "Turn Blur Off" : "Turn Blur On";
+});
 
-// btn.addEventListener('click', () => {
-//     chrome.storage.local.get('enabled', ({ enabled }) => {
-//         const newState = !enabled;
-//         chrome.storage.local.set({ enabled: newState });
-//         btn.innerText = newState ? 'Turn Off' : 'Turn On';
-//     });
-// });
+// Toggle button click
+toggleBtn.addEventListener("click", async () => {
+    const { enabled } = await chrome.storage.sync.get("enabled");
+    const newState = !enabled;
+
+    // Save new state
+    await chrome.storage.sync.set({ enabled: newState });
+
+    // Update button text
+    toggleBtn.textContent = newState ? "Turn Blur Off" : "Turn Blur On";
+});

@@ -2,15 +2,28 @@
 <html>
     <head>
         <link rel="stylesheet" href="popup.css">
+
     </head>
     <body>
         <div class="container">
             <!-- <script src="toggle.js"></script> -->
             <div class="func_container">
                 <h1 class="header">Youtube productivity extention</h1>
-                <button >toggle</button>
+                <button id="toggleBtn">Toggle</button>
 
+                <div>
+                    <input type="text" id="channelInput" placeholder="Enter channel name">
+                    <button id="addChannelBtn">Add to whitelist</button>
+                </div>
+                
+                <!-- <ul class="whitelistDisplay"></ul> -->
             </div>
+
+            <footer>
+                Made with help by Loveable - <a href="https://github.com/dadaxingxing/productivity-youtube-extention" target="_blank">source code</a>
+            </footer>
+
+            <script src="toggle.js"></script>
         </div>
     </body>
 </html>
