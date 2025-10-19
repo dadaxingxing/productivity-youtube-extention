@@ -1,11 +1,21 @@
 /* CSS class that blurs the thumbnail */
-.blurred {
+.blurred, 
+.html5-video-player
+{
     filter: blur(20px) !important; 
+    transition: filter 0.5s ease-in-out !important;
 }
 
+
+
+.blurred:hover,
+.blurred:hover .html5-video-player {
+    filter: blur(0px) !important; 
+}
 
 /* Omits the Youtube thumbnail titles */
 .blurred #video-title {
     color: transparent !important;
     text-shadow: none !important;
 }
+
