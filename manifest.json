@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "BlurTube",
+  "name": "Lock'd",
   "version": "1.0",
   "description": "Blurs all YouTube thumbnails and omit titles except whitelisted channels",
   "content_scripts": [
@@ -10,5 +10,9 @@
       "css": ["styles.css"]
     }
   ],
-  "permissions": ["activeTab"]
+  "permissions": ["activeTab"],
+
+  "action" : {
+    "default_popup": "popup.html"
+  }
 }

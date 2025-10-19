@@ -16,7 +16,7 @@ function blurVideo() {
     const videos = document.querySelectorAll('ytd-rich-item-renderer, ytd-video-renderer, ytd-grid-video-renderer, ytd-search-pyv-renderer');
     
     
-    videos.forEach(video => {
+        videos.forEach(video => {
         const channelName = video.querySelector("#channel-name a")?.innerText?.trim();
         // const sponsored = video.querySelector(
         //     'ytd-badge-supported-renderer, .badge-style-type-ad, .badge-style-type-simple, .ytd-ad-badge-renderer'
